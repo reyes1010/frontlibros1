@@ -12,7 +12,7 @@ const EditarLibro = () => {
     const navigate = useNavigate();
 
     const obtenerLibro = useCallback(() => {
-        axios.get(`http://127.0.0.1:8000/api/libros/${id}`)
+        axios.get(`http://productos.nelsonreyesfreelancer.com/api/libros/${id}`)
             .then(response => {
                 const libro = response.data;
                 setTituloLibro(libro.TituloLibro);
@@ -38,7 +38,7 @@ const EditarLibro = () => {
             precio: precio
         }
 
-        axios.put(`http://127.0.0.1:8000/api/libros/${id}`, libroEditado)
+        axios.put(`http://productos.nelsonreyesfreelancer.com/api/libros/${id}`, libroEditado)
         .then(() => {
             navigate("/");
         }).catch(error => {

@@ -11,7 +11,7 @@ const AgregarLibro = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post("http://127.0.0.1:8000/api/libros", {
+        axios.post("http://productos.nelsonreyesfreelancer.com/api/libros", {
             TituloLibro,
             Autor,
             precio
